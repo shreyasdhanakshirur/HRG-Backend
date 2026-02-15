@@ -4,7 +4,7 @@ const MatchSchema = new mongoose.Schema({
   name: String,
   teamA: { type: mongoose.Schema.Types.ObjectId, ref: 'Team', required: true },
   teamB: { type: mongoose.Schema.Types.ObjectId, ref: 'Team', required: true },
-  format: { type: String, enum: ['T20','T10','T50','unlimited'], default: 'T20' },
+  format: { type: String, enum: ['T20','T10','T50','ODI','unlimited'], default: 'T20' },
   oversPerInnings: { type: Number, default: 20 },
   tossWonBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Team' },
   electedTo: { type: String, enum: ['bat','bowl'] },
